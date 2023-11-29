@@ -5,28 +5,10 @@ import java.util.Collections;
 import java.util.Scanner;
 
 //Given an Array with n elements, the task is to rotate the array to the left by D steps, where D is non negative
+
 public class LeftRotateArrayByDPlaces {
-//static void leftRotateArrayByDPlace(int arr[], int n, int d){
-//d = d%n;
-//int []temp = new int[d];
-//    //storing d elements in temp array
-//    for (int i = 0; i < d; i++) {
-//        temp[i] = arr[i];
-//    }
-//    //shifting
-//    for (int i = d; i < n; i++) {
-//        arr[i-d] = arr[i];
-//    }
-//
-//    // putting back in array
-//    for(int i = n-d; i<n; i++){
-//        arr[i] = temp[i-(n-d)];
-//    }
-//    }
+
 static void leftRotateArrayByDPlaces(int[] arr, int n, int d){
-//    reverse(arr,0,arr.length-d-1);
-//    reverse(arr,arr.length-d,arr.length-1);
-//    reverse(arr,0,arr.length-1);
     reverse(arr, 0, d - 1);
     reverse(arr, d, n - 1);
     reverse(arr, 0, n - 1);
